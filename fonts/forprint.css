@@ -1,0 +1,14 @@
+html{
+  padding: 0;
+  background-image: none;
+}
+body {
+    background-color:#FFF;
+    border-width:0 0 0 0;
+    margin:0;
+    width:100%;
+    box-shadow: none;
+}
+.section{
+  padding: 0 1em;
+}
