@@ -126,7 +126,7 @@ a:hover{ color: #47a3da;}
 	background-color: #47a3da;
 	color: #333333;
 	height: auto;
-	margin: 0 auto;
+	margin: 0px auto;
 	overflow: hidden;
 	padding: 0 0;
 	padding-bottom: 50px;
@@ -147,6 +147,8 @@ a:hover{ color: #47a3da;}
 
 #ptf{ 
    border:3px solid #C8E3F4;
+   width: 100%;
+   max-width: 400px;
    opacity: 1.0;
     filter: alpha(opacity=100)
 }
