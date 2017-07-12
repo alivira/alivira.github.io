@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <title>Ali Vira</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<script src="js/modernizr.js"></script> 
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/main.js"></script> 
+		<script src="js/bootstrap.min.js"></script> 
+
+		<script language='javascript'>
+		var shiftWindow = function() { scrollBy(0, -70) };
+			if (location.hash) shiftWindow();
+			window.addEventListener("hashchange", shiftWindow);
+		</script>
+
+
+
+		<link rel="stylesheet" href="css/bootstrap-grid.css"/>  
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>  
+		<link rel="stylesheet" href="css/font-awesome.min.css"/>
+ 		
+ 		<!-- add after bootstrap.min.css -->
+		<link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.css">
+		<!-- add after bootstrap.min.js -->
+		<script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.js"></script>
+
+		<link rel="stylesheet" href="css/style.css"/> 
+
+
+
+
+
+
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500, 700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  </head>
+
+  
+  <body data-spy="scroll" data-target="#toc">
+
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="index.html">Ali Vira</a>
+		      <a class="navbar-brand" href="https://www.facebook.com/alivira" target="_blank"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+			  <a class="navbar-brand" href="https://www.linkedin.com/in/alivira/" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></a>
+			  <a class="navbar-brand" href="https://www.instagram.com/alivira/" target="_blank"><span class="fa fa-camera-retro" aria-hidden="true"></span></a>
+			  <a class="navbar-brand" href="mailto:ali.vira93@gmail.com" target="_blank"><span class="fa fa-envelope" aria-hidden="true"></a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="art.html">art</a></li>
+		        <li><a href="photography.html">photography</a></li>
+		        <li><a href="music.html">music</a></li>
+		        <li><a href="videos.html">videos</a></li>
+
+		        <li class="dropdown active">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">projects<span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="fruitsalad.html">fruit salad</a></li>
+		            <li><a href="glhf.html">glhf magazine</a></li>
+		            <li><a href="iotrap.html">ioTrap</a></li>
+		            <li class="active"><a href="contour.html">contour</a></li>
+		            <li><a href="keyposture.html">keyPosture</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+
+		<div class="container">
+		    <div class="row">
+		      <div class="col-sm-3 col-sm-auto" align="left">
+		        <nav id="toc" data-spy="affix" data-toggle="toc"></nav>
+		      </div>
+		      
+			<div class="col-sm-9">
+				<div class="container">
+				<div style="margin-top:15%"></div>
+			
+				<div id="bodyPara">
+				<h1 class="mainHeading" data-toc-skip>contour.</h1>
+				<br><br>
+				<p>
+					Users are hesitant to shop for clothes online because users are unsure if purchased clothes will fit as desired. Over 40% of all clothing purchased online is returned. For our fourth-year Capstone project, we designed a solution that takes accurate user body measurements and integrates them into the online retail space so that shoppers are comfortable making online clothing purchases. This page provides a brief overview of the design process and the designed solution for the project. A copy of our Capstone symposium poster can be found <a href="files/capstone_poster.pdf" target="_blank">here</a>.
+					<br><br>
+					Members: <em>Ali Vira, Garrett Hardy, Vishal Babu, Allan Meng, Kevin Lau</em>
+				</p>
+				<br>
+				<br>
+
+				<h1 class="bodyHeading" id="process">Design Process</h1>
+				<br>
+				<p>Research was gathered from market studies, scientific papers, and patents. State of the art solutions were tested, and user studies were conducted to establish user requirements and benchmarks. Low-fidelity solutions were constructed and user-tested. The problem was broken down into two parts, acquiring user body measurements, and subsequently integrating those measurements into the online shopping space. A two-part solution was designed and implemented: a 2D body scanning web interface to acquire user measurements, and a Chrome extension to take those user measurements and match them to clothing sizes. The scanning algorithm was user-tested and the resulting data was statistically analyzed.</p>
+				<br><br>
+				<h2 class="subHeading" id="survey">Surveys</h2>
+				<br>
+				<p>Online retailers and online shoppers were engaged with to substantiate the conclusions drawn from the early research phase, to create benchmarks for the designed solution, and to learn more about the problem space. Online retailer engagement took the form of emails and phone calls, as most of the online retailers being surveyed were unavailable for in-person meetings. Online shopper engagement was conducted through the use of online surveys and in-person interviews. 
+				<br><br>
+				<a href="https://en.wikipedia.org/wiki/Fisher%27s_exact_test" target="_blank">Fisher’s exact test</a> was used to establish significance of clothes fit to customer satisfaction from the initial survey data. The Fisher test was chosen for two main reasons; the sample size constraint and its ability to form associations between two categorical variables. With a resulting p-value less than 0.05, the Fisher test concluded that customer satisfaction was heavily dependent on well-fitting clothes.
+				</p>
+
+				    <div class="container" align="center">
+				    				<h3 class="tableHeading" data-toc-skip>Table 1: Fischer's exact test</h3>
+
+						<table class="table table-bordered table-nonfluid">
+						    <thead>
+						      <tr>
+						        <th></th>
+						        <th>Fit is an issue</th>
+						        <th>Fit is not an issue</th>
+						        <th>Total</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						      <tr>
+						        <td>Return purchases</td>
+						        <td>27</td>
+						        <td>3</td>
+						        <td>30</td>
+						      </tr>
+						      <tr>
+						        <td>Do not return purchases</td>
+						        <td>4</td>
+						        <td>26</td>
+						        <td>30</td>
+						      </tr>
+						      <tr>
+						        <td>Total</td>
+						        <td>31</td>
+						        <td>29</td>
+						        <td>60</td>
+						      </tr>
+
+						    </tbody>
+						  </table>
+
+						  <p><em>The two-tailed P value less than 0.001</em></p>
+  				</div>
+
+  				<br>
+				<h2 class="subHeading" id="objectives">Objectives</h2>
+				<br>
+				<p><b><span>Phase One</span></b> (acquire user measurements)</p>
+				<ul>
+					<li>Max of 5% measurement error, 95% of the time</li>
+					<li>Max of 5 minutes to obtain measuremetns</li>
+				</ul>
+				<p><b><span>Phase Two</span></b> (integrate user measurements)</p>
+				<ul>
+					<li>Compy with data privacy regulations</li>
+					<li>Maintain a user profile</li>
+					<li>Implement a rating/feedback system</li>
+					<li>Allow non-baggy clothes during measurement</li>
+					<li>Compataible with existing online retail sustems</li>
+				</ul>
+
+
+
+				<br>
+				<h2 class="subHeading" id="lofo">Low Fidelity Testing</h2>
+				<br>
+				<p>
+				Potential solutions to address the measurement acquisition portion of the problem were devised. Three low-fidelity solutions were created and user-tested on twelve potential customers. The first solution detailed a process whereby a customer would send a tailor an article of clothing that fit as desired, along with other articles of clothing that did not fit as desired. The tailor would modify the ill-fitting garments to match the measurements obtained from the properly-fitting garment. The second solution used a software based 2D body scanning method on two full-body photographs; one front view, and one side view. The user would manually select the contours of the body in each photograph and a black box algorithm would return the user’s body measurements. The third solution augmented the second solution with image recognition so that the user no longer needed to manually define the contours of the body in each photograph.
+				</p>
+				<div class="container" align="center">
+				<img src="img/portfolio/contour/lofi.JPG" id="regImg">
+				</div>
+				<p>
+				The prototype for the first solution was a storyboard detailing the manual tailoring process. Out of 12 participants, only 58% were interested in the first solution concept. Furthermore, 42% of users would wait no longer than one week to receive their clothes back. The strict wait time made the implementation of the first solution unlikely. The prototype for the second solution was a physical apparatus which approximated a system to manually define contours of key body measurements. 45% of all users stated they would spend no longer than 5 minutes completing all measurements. The prototype for the third solution involved the user taking photos of their body, given requirements to ensure the photos were suitable for an image recognition algorithm. Ultimately, 73% of users favoured the second solution over the third. Furthermore, the second solution was more feasible to implement given time and resource constraints, while still offering the same results as the third solution. Additionally, with 90% of all users were satisfied with spending up to 5 minutes using the system.
+				</p>
+
+				<br><br>
+				<h2 class="subHeading" id="algorithm">Algorithm</h2>
+				<br>
+				<p>A brute-force methodology was employed to determine if 2D body scanning methods could yield accurate body measurements. Three users were each photographed twice. The first photograph was a full body shot of the user facing the camera while holding a credit card flush with their chest (Appendix Figure 4). The second photograph was a full body side shot with the user holding a credit card at hip-level. By identifying the widths of the neck, chest, and waist from the front view and the side view, and by using the credit card as a scaling tool, the body measurements were successfully calculated by modeling each body segment as the circumference of an ellipse. The measurements produced by manual brute-force analysis were off of the user’s real body measurements by 7% on average. Chest measurements were the most accurate on average, with errors of less than 1%, and neck measurements were the least accurate with an average error of 14% for all participants.</p>
+
+				<div class="container" >
+							<div class="row justify-content-md-center" >	
+								<div class="col-sm" align="center">
+									<img src="img/portfolio/contour/front.png" id="regImg">
+								</div>
+
+								<div class="col-sm" align="center">
+									<img src="img/portfolio/contour/side.png" id="regImg">
+								</div>
+							</div>
+				</div>
+
+				<p>A functional software prototype was then created to mimic the measurement taking process from the validated brute-force testing. Initial user-testing of the functional software prototype was conducted to determine the optimal user position in each photograph to maximize the accuracy of the measurement taking algorithm. User positions included standing close to the camera, standing far away from the camera, tilting the camera up and down, and sitting in front of the camera for the initial two photographs. The seated position was ultimately selected as the optimal way of reducing measurement error. </p>
+
+				<br><br>
+				<h2 class="subHeading" id="statistical">Statiscal Validation</h2>
+				<br>
+				<p>
+				User-testing was conducted to identify areas of improvement in terms of human factors and to statistically validate the accuracy of the measurement algorithm. Fifteen users were tested for this statistical validation. The first eight users were each manually measured three times then measured by the prototype three times. The remaining users were measured by the prototype first and were manually measured afterwards. This procedure was created to detect and eliminate baseline drift and any bias introduced by knowing measurements beforehand.
+				<br><br>
+				Random Block Design was used to conduct a thorough multi-factor analysis of variance on the manual measurement data and the algorithm measurement data for all tested users. This method was chosen to preserve and utilize the fact that measurements are specific to each user, and to fully use the multiple measurement trials. The method also helps eliminate noise and ensures that significantly inaccurate algorithm measurements on opposite sides of the mean do not cancel each other out. With a p-value of 0.477 for the algorithm flag in the multiple regression equation for each measurement, there was insufficient evidence to reject the null hypothesis that the means between the manual measurements and the algorithm measurements were identical for each user.  
+				</p>
+				
+				<div class="container" align="center">
+				    				<h3 class="tableHeading" data-toc-skip>Table 2: Random Block ANOVA</h3>
+
+						<table class="table table-bordered table-nonfluid">
+						    <thead>
+						      <tr>
+						        <th></th>
+						        <th>Df</th>
+						        <th>Sum Sq</th>
+						        <th>Mean Sq</th>
+						        <th>F value</th>
+						        <th>Pr(>F)</th>
+						        <th></th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						      <tr>
+						        <th>Name</th>
+						        <td>10</td>
+						        <td>495.9</td>
+						        <td>49.6</td>
+						        <td>45.890</td>
+						        <td>&#60;2e-16</td>
+						        <td>***</td>
+						      </tr>
+						      <tr>
+						        <th>Algorithm</th>
+						        <td>1</td>
+						        <td>0.5</td>
+						        <td>0.5</td>
+						        <td>0.508</td>
+						        <td>0.477</td>
+						        <td></td>
+						      </tr>
+						      <tr>
+						        <th>Body.Part</th>
+						        <td>2</td>
+						        <td>15735.1</td>
+						        <td>7867.5</td>
+						        <td>7280.741</td>
+						        <td>&#60;2e-16</td>
+						        <td>***</td>
+						      </tr>
+						      <tr>
+						        <th>Residuals</th>
+						        <td>172</td>
+						        <td>185.9</td>
+						        <td>1.1</td>
+						        <th></th>
+						        <th></th>
+						        <th></th>
+						      </tr>
+						    </tbody>
+						  </table>
+  				</div><br>
+
+
+
+				<p>
+				Next, the distribution of error between the algorithm measurements and the manual measurements was investigated. Two categories of users were identified. Novice users were first-time users of the system. Expert users were team members who used the algorithm on the novice user photographs to identify differences. Next, the measurements were converted into a set of binomial data. A measurement from the algorithm within 5% of the actual measurement was counted as a success.
+				</p>
+
+				<div class="container" align="center">
+				    				<h3 class="tableHeading" data-toc-skip>Table 3: Binomial task completion rate summary</h3>
+
+						<table class="table table-bordered table-nonfluid">
+						    <thead>
+						      <tr>
+						        <th rowspan="2"></th>
+						        <th colspan="2">All Measurements</th>
+						        <th colspan="2">No Baggy Clothing</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						      <tr>
+						        <th></th>
+						        <td>Novice</td>
+						        <td>Expert</td>
+						        <td>Novice</td>
+						        <td>Expert</td>
+						      </tr>
+						      <tr>
+						        <th>Success</th>
+						        <td>69</td>
+						        <td>93</td>
+						        <td>57</td>
+						        <td>73</td>
+						      </tr>
+						      <tr>
+						        <th>Total</th>
+						        <td>108</td>
+						        <td>135</td>
+						        <td>81</td>
+						        <td>90</td>
+						      </tr>
+						      <tr>
+						        <th>Success Rate</th>
+						        <td>0.639</td>
+						        <td>0.689</td>
+						        <td>0.704</td>
+						        <td>0.811</td>
+						      </tr>
+						      <tr>
+						        <th>Padj</th>
+						        <td>0.634</td>
+						        <td>0.684</td>
+						        <td>0.694</td>
+						        <td>0.798</td>
+						      </tr>
+						      <tr>
+						        <th>Best Point Estimate</th>
+						        <td>0.639</td>
+						        <td>0.689</td>
+						        <td>0.704</td>
+						        <td>0.811</td>
+						      </tr>
+						      <tr>
+						        <th>Exact Binomial P-Value, &beta;=0.95</th>
+						        <td>1.000</td>
+						        <td>1.000</td>
+						        <td>1.000</td>
+						        <td>1.000</td>
+						      </tr>
+						      <tr>
+						        <th>Exact Binomial P-Value, &beta;=0.78</th>
+						        <td>1.000</td>
+						        <td>0.995</td>
+						        <td>0.960</td>
+						        <td>0.285</td>
+						      </tr>
+
+						    </tbody>
+						  </table>
+  				</div><br>
+  				<p>With a p-value of 1.000, and using a 95% confidence level, the null hypothesis that the sample success rate of novice users is less than or equal to the benchmark value of 0.78 should not be rejected. This means that the designed solution fails the benchmark that the algorithm should return a less than 5% error more than 78% of the time. Ultimately, this could have been caused by factors such as poor instructions, baggy clothing, and poor perception of measurement contours. This is illustrated by the fact that the success rates for both novice and expert users increased when users with baggy clothing were eliminated from the data set. Furthermore, expert users performed better at defining contours within the required 5% error. Errors were generally equally distributed among users and among specific measurements. Therefore, such errors could not be compensated within the algorithm itself.</p>
+
+
+				<br><br>
+				<h2 class="subHeading" id="integration">Integration</h2>
+				<br>
+				<p>While the measurement algorithm was being tested, a parallel study was conducted to uncover the optimal way to integrate the functional software prototype into the online shopping space. A survey was sent to male users aged 18 - 35 to reaffirm the rate of dissatisfaction during online shopping and to determine the reasons for that dissatisfaction. Of the twenty users surveyed, more than half shop for clothes online at least 2 times a year. 80% of the surveyed users cited fit as their biggest problem when online shopping. More than 50% of surveyed users did not know their body measurements, and of the remaining users that did, 80% only knew their sizes in terms of the labeled sizes at the stores they regularly shopped at. These observations were used to validate the notions that the majority of male individuals in the 18 - 35 target demographic shop online regularly, that fit is a big issue for users, and that the majority of target users don’t know their inherent body measurements. 
+
+
+				<br><br>
+				An in-person follow-up experiment was conducted on the survey participants. In the first phase of the experiment, participants were made to shop online both with and without a sizing chart and measurements to determine how sizing charts and measurements impacted shopping behaviour. It was found that users were more comfortable shopping online after knowing their body measurements. In the mock shopping trial, users took on average 1 - 3 minutes to select the shirt they wanted without knowing their measurements. This decision time dropped to 10 - 30 seconds after users were told their exact measurements.
+				<br><br>
+
+				In the second phase of the experiment, participants interacted with three different mock interfaces to determine how best to incorporate the measurement taking algorithm into the online shopping process. The first mock interface embedded the measurement taking process on a retailer’s website, giving the retailer the power to serve the customer with appropriately sized clothes. The second mock interface embedded the measurement taking process as a Chrome extension, where the extension would inspect a customer’s cart and inform the customer if a shirt was likely to fit as desired based on a sizing chart database. The last mock interface was a standalone website where a user would complete the measurement acquisition process and clothes matching those measurements would be aggregated from multiple online retailers. 75% of users opted for the Chrome extension interface over the alternatives, citing the ability to browse multiple stores and the flexibility to run the extension when desired as key reasons. 
+
+				<br><br>
+				 In the final phase of the experiment, participants went through a mock shopping process and were presented with articles of clothing that did not fit as expected to analyze how participants reacted to the surprise and what their expected avenues of recourse were. The majority of interviewed users were shocked enough by receiving an article of clothing that didn’t fit, that most indicated they would be unlikely to shop at the same store again. This observation introduced a feedback and rating mechanism for purchased clothes to the project scope so that customers could identify problem items prior to purchasing and have a voice if the purchase did not turn out as expected.</p>
+
+				<br><br>
+				<h2 class="subHeading" id="testing">Final Testing</h2>
+				<br>
+				<p>A final round of testing was conducted after the full prototype was developed. The objectives of the final round of testing were to reaffirm that the solution was an improvement of the current online shopping process, to verify customer sentiment throughout the process of using the designed solution, and to make sure that the process met the design benchmarks from earlier phases of the design. Ultimately, users were satisfied with all stages of use and the design satisfied all requirements except for the measurement consistency requirement.
+				<br>
+
+				<div class="container" align="center">
+				<img src="img/portfolio/contour/journey.png" id="regImg">
+				</div>
+
+				<br>
+
+				<h1 class="bodyHeading" id="solution">Designed Solution</h1>
+				<br>
+				<p>The designed solution exists as a Chrome extension. Creating an account for the first time prompts a user to record their measurements. A user will submit a photograph from the front, and a photograph from the side. The extension will then prompt the user to place digital markers on opposite sides of their neck, chest, and waist respectively. After the extension extrapolates a user's measurements, the user can receive a sizing recommendation based on those measurements from a retailer website by clicking the 'Contour' icon.
+				<br><br>
+
+
+				A tutorial video outlining the solution is shown below. The github link for the project (which includes some stylstic updates not shown in the video) can be found <a href="https://github.com/zsmeng9/ContourApp" target="_blank">here</a>. 
+
+				<br><br>
+
+				<div align="middle"><iframe width="560" height="315" src="https://www.youtube.com/embed/sPJKYxUlUn8?ecver=1" frameborder="0" allowfullscreen></iframe></div>
+
+				<br> 
+
+				<p>Below is an updated image of how the sizing recommendation portion of the feature looks</p>
+
+				<div class="container" align="center">
+				<img src="img/portfolio/contour/screenshot.png" id="regImg">
+				</div>
+
+
+		      </div>
+		   </div>
+		</div>
+	</div>
+	</div>
+  </body>
+</html>

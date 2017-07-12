@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <title>Ali Vira</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<script src="js/modernizr.js"></script> 
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/main.js"></script> 
+		<script src="js/bootstrap.min.js"></script> 
+
+		<script language='javascript'>
+		var shiftWindow = function() { scrollBy(0, -70) };
+			if (location.hash) shiftWindow();
+			window.addEventListener("hashchange", shiftWindow);
+		</script>
+
+
+
+		<link rel="stylesheet" href="css/bootstrap-grid.css"/>  
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>  
+		<link rel="stylesheet" href="css/font-awesome.min.css"/>
+ 		
+ 		<!-- add after bootstrap.min.css -->
+		<link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.css">
+		<!-- add after bootstrap.min.js -->
+		<script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.js"></script>
+
+		<link rel="stylesheet" href="css/style.css"/> 
+
+
+
+
+
+
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500, 700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  </head>
+
+  
+  <body data-spy="scroll" data-target="#toc">
+
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="index.html">Ali Vira</a>
+		      <a class="navbar-brand" href="https://www.facebook.com/alivira" target="_blank"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+			  <a class="navbar-brand" href="https://www.linkedin.com/in/alivira/" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></a>
+			  <a class="navbar-brand" href="https://www.instagram.com/alivira/" target="_blank"><span class="fa fa-camera-retro" aria-hidden="true"></span></a>
+			  <a class="navbar-brand" href="mailto:ali.vira93@gmail.com" target="_blank"><span class="fa fa-envelope" aria-hidden="true"></a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="art.html">art</a></li>
+		        <li><a href="photography.html">photography</a></li>
+		        <li><a href="music.html">music</a></li>
+		        <li><a href="videos.html">videos</a></li>
+
+		        <li class="dropdown active">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">projects<span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="fruitsalad.html">fruit salad</a></li>
+		            <li><a href="glhf.html">glhf magazine</a></li>
+		            <li><a href="iotrap.html">ioTrap</a></li>
+		            <li><a href="contour.html">contour</a></li>
+		            <li class="active"><a href="keyposture.html">keyPosture</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+
+		<div class="container">
+		    <div class="row">
+		      <div class="col-sm-3 col-sm-auto" align="left">
+		        <nav id="toc" data-spy="affix" data-toggle="toc"></nav>
+		      </div>
+		      
+			<div class="col-sm-9">
+				<div class="container">
+				<div style="margin-top:15%"></div>
+			
+				<div id="bodyPara">
+				<h1 class="mainHeading" data-toc-skip>keyposture.</h1>
+				<br><br>
+				<p>
+					75% of musicians experience playing related injuries that hinder their ability to play instruments. A solution was devised that optimizes and monitors a pianist’s movements, providing feedback in regards to proper posture and suggesting appropriate rest times in order to prevent the development of bad habits that lead to injury. This page provides a brief overview of the engineering analysis undertaken and the designed solution.
+					<br><br>
+					Members: <em>Ali Vira, Adrienne Chan, Charis Chao, Evan Shen</em>
+				</p>
+				<br>
+				<br>
+
+				<h1 class="bodyHeading" id="analysis">Engineering Analysis</h1>
+				<br>
+				<p>Functional, user, and engineering requirements were created. A mathematical model was created to isolate moments at the joints in a pianist’s arm. MATLAB was used to optimize the model and run sensitivity analyses. The designed solution features two main components, a tracking component to identify and optimize posture, and a feedback component to inform the pianist how they are playing. The development of the solution followed an iterative design process. A Kinect and a connected web application were ultimately respectively selected as the two main design components. Functional tests were performed on the hardware and software components. The software was further tested for speed and accuracy. User tests were conducted on experienced piano players.</p>
+
+
+				<br><br>
+				<h2 class="subHeading" id="requirements">Requirements</h2>
+				<br>
+				<p>Interviews with piano teachers, pianists, professors, and researchers were combined with research gleaned from state of the art products and academic papers to generate the following requirements.</p>
+				<p><b><span>Functional</span></b> </p>
+				<ul>
+					<li>Measure...</li>
+					<ul>
+						<li>Angle of wrists, elbows, and shoulder</li>
+					</ul>
+					<li>Calculate and inform user of...</li>
+					<ul>
+						<li>Safety level</li>
+						<li>Appropriate time to take a break</li>
+					</ul>
+					<li>Record and replay audio</li>
+					<li>Provide visual cues of safety level</li>
+				</ul>
+
+				<p><b><span>User</span></b> </p>
+				<ul>
+					<li>Cannot interfere with playing</li>
+					<li>Aesthetically pleasing</li>
+					<li>Provide feedback in a meaningful manner</li>
+				</ul>
+
+				<p><b><span>Engineering</span></b> </p>
+				<ul>
+					<li>Wearable weight < 100g if applicable</li>
+					<li>Cost < $150</li>
+					<li>Error tolerance - Must capture movement within 4cm</li>
+				</ul>
+
+				
+
+
+
+
+
+
+				<br><br>
+				<h2 class="subHeading" id="model">Mathematical model</h2>
+				<br>
+				<p>
+				The mathematical model was divided into two main components. The first half of model optimized a pianist’s playing position. The second part of the model monitored the pianist’s playing position to identify posture deviances from the optimum posture, inform the pianist when a rest was needed, and inform the pianist when to stop playing entirely. Figure 1 below provides a graphical illustration of the mathematical model. 
+				</p>
+
+				<div class="container" align="center">
+				<img src="img/portfolio/keyposture/model.png" id="biggerImg">
+				</div>
+
+				<br><br>
+				<h2 class="subHeading" id="optimization">Optimization</h2>
+				<br>
+				<p>The optimization model was designed to minimize the moments experienced by a pianist at the wrist, elbow, and shoulder joints. A planar, static, linked segment model of the human arm was created. The position of the back was fixed to constrain the number of equations in the optimization problem such that the problem could be inputted into a MATLAB solver.</p>
+
+				<div class="container">
+							<div class="row justify-content-md-center">	
+								<div class="col-sm" align="center">
+									<img src="img/portfolio/keyposture/lsm1.png" id="regImg">
+								</div>
+							</div>
+
+							<div class="row justify-content-md-center">	
+								<div class="col-sm" align="center">
+									<img src="img/portfolio/keyposture/wrist.png" id="regImg">
+								</div>
+
+								<div class="col-sm" align="center">
+									<img src="img/portfolio/keyposture/forearm.png" id="regImg">
+								</div>
+
+								<div class="col-sm" align="center">
+									<img src="img/portfolio/keyposture/upperarm.png" id="regImg">
+								</div>
+							</div>
+					</div>
+
+				<p>Sum of the forces and sum of the moments calculations on each segment yielded the equations below.</p>	
+
+				<div class="container" align="center">
+				<img src="img/portfolio/keyposture/formula/set1.png" id="formula"</div>
+				</div><br>
+
+				<p>Where <em>F<sub>x</sub></em> are the forces in the <em>x</em>-direction, <em>F<sub>y</sub></em> are the forces in the <em>y</em>-direction and <em>M<sub>B</sub></em> , <em>M<sub>C</sub></em> , <em>M<sub>D</sub></em> are respectivly the moments around <em>B</em> , <em>C</em>, and <em>D</em>. <em>F<sub>Ax</sub></em> , <em>F<sub>Bx</sub></em> , <em>F<sub>Cx</sub></em> , <em>F<sub>Dx</sub></em> are the horizontal forces at each joint, <em>F<sub>Ay</sub></em> , <em>F<sub>By</sub></em> , <em>F<sub>Cy</sub></em> , <em>F<sub>Dy</sub></em> are the vertical forces at each joint, <em>l<sub>w</sub></em> is the length of the wrist, <em>l<sub>f</sub></em> is the length of the forearm, <em>l<sub>u</sub></em> is the length of the upper arm, <em>m<sub>w</sub></em> is the mass of the upper arm, <em>g</em> is the acceleration due to gravity, <em>&Phi;<sub>A</sub></em> is the angle between the wrist and the horizontal, <em>&Theta;<sub>B</sub></em> is the angle between the forearm and the horizontal, and <em>&Theta;<sub>C</sub></em> is the angle between the upper arm and the horizontal axis.</p><br>
+				<p>Geometric constraints were imposed on the system to ensure that the lengths of the linked segments did not exceed a user’s vertical and horizontal distance from the piano.</p>
+
+				<div class="container" align="center">
+				<img src="img/portfolio/keyposture/formula/set2.png" id="formula"</div>
+				</div><br>
+
+				<p>The objective function below was formulated using the equations above where <em>A</em> is a matrix of weighted coefficients to scale the importance of each calculated moment on the pianist’s safety. The inputs are the lengths and masses of the pianist’s limbs, as well as the pianist’s vertical and horizontal distance to the piano (<em>h</em> and <em>l</em> respectively). Outputs are the optimized angles <em>&Phi;<sub>A</sub></em> , <em>&Theta;<sub>B</sub></em> , and <em>&Theta;<sub>C</sub></em> </p>
+
+				<div class="container" align="center">
+				<img src="img/portfolio/keyposture/formula/set3.png" id="formula"</div>
+				</div><br>
+
+				<p>The physical limitations of the body introduce maximum safe possible ranges of motion for the wrist, elbow, and shoulder of the pianist while playing the piano. These ranges serve as upper and lower bounds for the objective function. The ranges are illustrated under the figure below.</p>
+
+				<div class="container" align="center">
+				<img src="img/portfolio/keyposture/constraints.jpg" id="biggerImg">
+				</div>
+
+				<div class="container" align="center">
+				<img src="img/portfolio/keyposture/formula/set4.png" id="formula"</div>
+				</div><br>
+
+				<p>The objective function subject to above constraints were optimized using <em>fmincon</em> as part of the MATLAB optimization toolkit, yielding the optimized posture parameters for the second half of the mathematical model. Sensitivity analyses and simulations are detailed later in this section.</p>
+
+				
+
+				<br><br>
+				<h2 class="subHeading" id="DSR">Deviance, Stop, and Rest</h2>
+				<br>
+				<p>The second half of the mathematical model dealt with monitoring the pianist to determine how far the pianist’s posture deviated from the previously calculated optimum position. The deviance from proper form was calculated using the deviance function below.
+				</p>
+
+				<div class="container" align="center">
+				<img src="img/portfolio/keyposture/formula/set5.png" id="formulalong"</div>
+				</div><br>
+				
+				<p>Where <em>B</em> is a matrix of weighted coefficients to scale the importance of each calculated moment on the pianist’s safety. The square of the difference between the measured and optimal angles is taken to punish large posture deviances and to mitigate the impact of negative numbers on the deviance function.<br><br>
+				
+
+				Research revealed that pianists must rest regularly during long practice sessions to minimize potential strain injuries. To serve this purpose, a summation function was implemented. The function increments by 1 point every second. When the function reaches a threshold specified by an instructor, a flag is thrown and the pianist is instructed to take a rest. When a pianist plays with poor posture, their likelihood of developing a strain injury increases. Thus, when a pianist plays with poor posture, rests should be taken more frequently. To serve this purpose, the summation function was designed to also sum the value of the deviance function every second. This way, a pianist would need to take rests more frequently if they were playing with poor posture. The summation rest function is shown below.
+				</p>
+
+				<div class="container" align="center">
+				<img src="img/portfolio/keyposture/formula/set6.png" id="formula"</div>
+				</div><br>
+
+				<p>Where <em>T</em> is the current value of the summation function, <em>i</em> is incremented every second, <em>D<sub>i</sub></em> is the deviance function value for the interval, <em>&alpha;</em> is a constant to modify the weight of the deviance function, and <em>T<sub>stop</sub></em> is the stopping threshold. <br><br>
+
+				Despite regular rest sessions, it was found that pianists should not play indefinitely. Thus, a stopping function was implemented. The stopping function was a secondary counter to count the number of times a pianist took a break as a result of the rest threshold. When the stopping counter hits the maximum daily allowance set by the piano teacher, the pianist is prompted to stop playing.</p>
+
+				<div class="container" align="center">
+				<img src="img/portfolio/keyposture/formula/set7.png" id="formula"</div>
+				</div><br>
+
+				<p>Where <em>T<sub>count</sub></em> is incremented by one every time <em>T<sub>stop</sub></em> from before is exceeded, and <em>S<sub>max</sub></em> is the maximum daily allowance of rests set by the piano teacher. 
+
+
+				<br><br>
+				<h2 class="subHeading" id="sensitivity">Sensitivity Analysis</h2>
+				<br>
+				<p>A sensitivity analysis was conducted on the mathematical model using MATLAB. Two main simulations were conducted. In the first simulation, multistart was used to see if the system would resolve to multiple local minima. Multistart operates by repeatedly running local solvers, fmincon for this application, at starting points close to the overall system starting point <em>x0</em>. In this instance, <em>x0</em> was defined as the starting posture of an average pianist.</p>
+
+				<div class="container" align="center">
+				<img src="img/portfolio/keyposture/formula/set8.png" id="formula"</div>
+				</div><br>
+
+				<p>The system failed to converge to a local minima with any of the 20 local solvers. The local solvers either exceeded the iteration limit or the function evaluation limit before converging to any minima. Further investigation revealed that the matrix representing the linear inequality constraints for the objective function was singular. Though the other matrices in the system had relatively low condition numbers, it is likely that this singular matrix rendered the overall problem ill-conditioned.<br><br>
+
+				For the second simulation, the constraints of the mathematical model were modified to investigate the degree of impact of those changes on the optimized posture. Specifically, the weights and lengths of each arm segment were tested for the 5th and 95th percentile body types for males and females. Across these tests, the optimized posture angles differed by at most 6 degrees. Modifying the distance of the pianist to the piano resulted in the largest changes. 
+				</p>
+
+
+
+				<br><br>
+				<h2 class="subHeading" id="usability">Usability Analysis</h2>
+				<br>
+				<p>The designed solution adheres to principles of human factors and general usability. A mobile phone application was chosen to display feedback from the second half of the mathematical model. This decision was made to give the user flexibility in terms of where they wanted their playing feedback to be displayed. The decision helped make the overall solution lightweight, allowing the computational modules that perform the body tracking and analysis to be separated from the display modules. Care was taken to ensure that the mobile interface too adhered to human factors principles. The mobile pane was split into three equal windows. An image of an arm was superimposed on top of the panes to indicate to the user which pane corresponded to which portion of the arm. Colourblind-friendly high contrast colors indicated to the user whether or not arm segments were in the optimal playing position.<br><br>
+
+				The user interface on the computational module was designed with visibility, feedback, and mapping in mind. A live on-screen skeleton superimposed on a video of the playing user was chosen to show the user their current playing position. An ideal skeleton drawing was added to the video, to indicate to the user their goal position. Angles between each body segment and the horizontal were added to the interface to provide further information and assist the user in debugging. Lastly, the user interfaces was designed to include a number of user-entered variables, allowing piano teachers to have full control over rest thresholds, stopping thresholds, body dimensions, and ideal angles.</p>
+				<br><br>
+
+				<h1 class="bodyHeading" id="designed">Designed Prototype</h1>
+				<br>
+				<p>The design of the final prototype consisted of the Kinect technology programmed in Visual Studio, and a web server for live feedback. A user playing the piano interacts with the prototype through two main interfaces, one on a computer, and one on a mobile phone. The computer interface allows the user to enter their optimized posture parameters (from the MATLAB optimization) and body dimensions. The git repository can be found <a href="https://github.com/alivira/KinectStreams" target="_blank">here</a>.
+
+				<br><br> 
+				Once the parameters have been entered, a user can elect to start the practice phase, triggering the Kinect motion capture code to execute. A fullscreen live video of the pianist playing is shown (Figure 10). Two skeletons are drawn on this live video in real time. The first ‘seen’ skeleton is what the Kinect detects as the user’s arm. The second skeleton is the ‘ideal’ skeleton, derived from the optimal parameters entered previously, superimposed on top of the screen so that the pianist has an idea of how to correct their posture. Once the screen is activated, a timer begins counting in one second increments. Once the timer reaches the threshold discussed in preceding sections, the pianist is prompted to take a break. 
+
+				<br><br> 
+				Once the pianist is finished practicing, they can return to the main screen where they can access the history pane. On the history pane, a user can find a video of their preceding practice sessions. The videos contain the ‘seen’ and ‘ideal’ skeletons from the live video feed, allowing a pianist to review their performance after a practice session is over. 
+
+				<div class="container" align="center">
+				<img src="img/portfolio/keyposture/skeleton.png" id="biggerImg">
+				</div>
+
+				<div class="container" align="center">
+				<img src="img/portfolio/keyposture/feedback.png" id="biggerImg">
+				</div>
+
+		      </div>
+		   </div>
+		</div>
+	</div>
+  </body>
+</html>
